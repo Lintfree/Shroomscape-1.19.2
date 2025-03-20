@@ -10,14 +10,14 @@ import net.minecraftforge.registries.RegistryObject
 
 
 class ModItemGroups {
-	object SHROOM_ITEM_GROUP : CreativeModeTab(Shroomscape.ID) {
+	object ShroomItemGroup : CreativeModeTab(Shroomscape.ID) {
 		override fun makeIcon(): ItemStack {
 			return ItemStack(Items.RED_MUSHROOM)
 		}
 
 		fun  addAllItemsToGroup() {
 			ITEM_REGISTRY.entries.forEach { item: RegistryObject<Item> ->
-				Item.Properties().tab(SHROOM_ITEM_GROUP)
+				Item.Properties().tab(ShroomItemGroup)
 			}
 		}
 

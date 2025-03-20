@@ -33,9 +33,7 @@ object Shroomscape {
         // Register the KDeferredRegister to the mod-specific event bus
         ModBlocks.BLOCK_REGISTRY.register(MOD_BUS)
 	    ModItems.ITEM_REGISTRY.register(MOD_BUS)
-	    ModItemGroups.SHROOM_ITEM_GROUP
-
-
+	    ModItemGroups.ShroomItemGroup
 
         val obj = runForDist(
 	        clientTarget = {
