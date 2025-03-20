@@ -18,9 +18,9 @@ import thedarkcolour.kotlinforforge.forge.runForDist
  *
  * An example for blocks is in the `blocks` package of this mod.
  */
-@Mod(ExampleMod.ID)
-object ExampleMod {
-    const val ID = "examplemod"
+@Mod(Shroomscape.ID)
+object Shroomscape {
+    const val ID = "shroomscape"
 
     // the logger for our mod
     val LOGGER: Logger = LogManager.getLogger(ID)
