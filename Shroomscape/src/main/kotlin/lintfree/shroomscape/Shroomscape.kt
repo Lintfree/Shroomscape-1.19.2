@@ -29,7 +29,7 @@ object Shroomscape {
         LOGGER.log(Level.INFO, "Hello world!")
 
         // Register the KDeferredRegister to the mod-specific event bus
-        ModBlocks.REGISTRY.register(MOD_BUS)
+        ModBlocks.BLOCK_REGISTRY.register(MOD_BUS)
 
         val obj = runForDist(
 	        clientTarget = {
