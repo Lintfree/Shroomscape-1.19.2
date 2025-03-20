@@ -1,6 +1,8 @@
 package lintfree.shroomscape
 
 import lintfree.shroomscape.block.ModBlocks
+import lintfree.shroomscape.item.ModItems
+import lintfree.shroomscape.tabs.ModItemGroups
 import net.minecraft.client.Minecraft
 import net.minecraftforge.fml.common.Mod
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent
@@ -30,6 +32,10 @@ object Shroomscape {
 
         // Register the KDeferredRegister to the mod-specific event bus
         ModBlocks.BLOCK_REGISTRY.register(MOD_BUS)
+	    ModItems.ITEM_REGISTRY.register(MOD_BUS)
+	    ModItemGroups.SHROOM_ITEM_GROUP
+
+
 
         val obj = runForDist(
 	        clientTarget = {
