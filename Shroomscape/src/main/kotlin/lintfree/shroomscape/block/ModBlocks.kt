@@ -17,52 +17,52 @@ import net.minecraftforge.registries.RegistryObject
 import java.util.function.Supplier
 
 object ModBlocks {
-    val BLOCK_REGISTRY = DeferredRegister.create(ForgeRegistries.BLOCKS, Shroomscape.ID)
+    val BLOCK_REGISTRY: DeferredRegister<Block?> = DeferredRegister.create(ForgeRegistries.BLOCKS, Shroomscape.ID)
 
     // the returned ObjectHolderDelegate can be used as a property delegate
     // this is automatically registered by the deferred registry at the correct times
-    val RED_SHROOM_STAIRS : RegistryObject<Block> = registerBlock("red_shroom_stairs") { ->
+    val RED_SHROOM_STAIRS : RegistryObject<StairBlock> = registerBlock("red_shroom_stairs") { ->
         StairBlock({RED_MUSHROOM_BLOCK.defaultBlockState()}, BlockBehaviour.Properties.copy(RED_MUSHROOM_BLOCK)
             .sound(SoundType.FUNGUS))
     }
-    val BROWN_SHROOM_STAIRS : RegistryObject<Block> = registerBlock("brown_shroom_stairs") { ->
+    val BROWN_SHROOM_STAIRS : RegistryObject<StairBlock> = registerBlock("brown_shroom_stairs") { ->
         StairBlock({BROWN_MUSHROOM_BLOCK.defaultBlockState()}, BlockBehaviour.Properties.copy(BROWN_MUSHROOM_BLOCK)
             .sound(SoundType.FUNGUS))
     }
 
-    val SHROOM_STEM_STAIRS : RegistryObject<Block> = registerBlock("shroom_stem_stairs") { ->
+    val SHROOM_STEM_STAIRS : RegistryObject<StairBlock> = registerBlock("shroom_stem_stairs") { ->
         StairBlock({RED_MUSHROOM_BLOCK.defaultBlockState()}, BlockBehaviour.Properties.copy(MUSHROOM_STEM)
             .sound(SoundType.FUNGUS))
     }
 
-    val RED_SHROOM_SLAB: RegistryObject<Block> = registerBlock("red_shroom_slab") {
+    val RED_SHROOM_SLAB: RegistryObject<SlabBlock> = registerBlock("red_shroom_slab") {
         SlabBlock(BlockBehaviour.Properties.copy(RED_MUSHROOM_BLOCK)
             .sound(SoundType.FUNGUS))
     }
 
-    val BROWN_SHROOM_SLAB: RegistryObject<Block> = registerBlock("brown_shroom_slab") {
+    val BROWN_SHROOM_SLAB: RegistryObject<SlabBlock> = registerBlock("brown_shroom_slab") {
         SlabBlock(BlockBehaviour.Properties.copy(BROWN_MUSHROOM_BLOCK)
             .sound(SoundType.FUNGUS))
     }
 
-    val SHROOM_STEM_SLAB: RegistryObject<Block> = registerBlock("shroom_stem_slab") {
+    val SHROOM_STEM_SLAB: RegistryObject<SlabBlock> = registerBlock("shroom_stem_slab") {
         SlabBlock(BlockBehaviour.Properties.copy(MUSHROOM_STEM)
             .sound(SoundType.FUNGUS))
     }
 
-    val RED_SHROOM_PRESSURE_PLATE: RegistryObject<Block> = registerBlock("red_shroom_pressure_plate") {
+    val RED_SHROOM_PRESSURE_PLATE: RegistryObject<PressurePlateBlock> = registerBlock("red_shroom_pressure_plate") {
         PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING,
             BlockBehaviour.Properties.copy(RED_MUSHROOM_BLOCK)
                 .sound(SoundType.FUNGUS))
     }
 
-    val BROWN_SHROOM_PRESSURE_PLATE: RegistryObject<Block> = registerBlock("brown_shroom_pressure_plate") {
+    val BROWN_SHROOM_PRESSURE_PLATE: RegistryObject<PressurePlateBlock> = registerBlock("brown_shroom_pressure_plate") {
         PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING,
             BlockBehaviour.Properties.copy(BROWN_MUSHROOM_BLOCK)
                 .sound(SoundType.FUNGUS))
     }
 
-    val SHROOM_STEM_PRESSURE_PLATE: RegistryObject<Block> = registerBlock("shroom_stem_pressure_plate") {
+    val SHROOM_STEM_PRESSURE_PLATE: RegistryObject<PressurePlateBlock> = registerBlock("shroom_stem_pressure_plate") {
         PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING,
             BlockBehaviour.Properties.copy(MUSHROOM_STEM)
                 .sound(SoundType.FUNGUS))
@@ -74,60 +74,60 @@ object ModBlocks {
         }
     }
 
-    val RED_SHROOM_BUTTON: RegistryObject<Block> = registerBlock("red_shroom_button") {
+    val RED_SHROOM_BUTTON: RegistryObject<ButtonBlock> = registerBlock("red_shroom_button") {
         CustomButtonBlock(
             BlockBehaviour.Properties.copy(RED_MUSHROOM_BLOCK))
     }
 
-    val BROWN_SHROOM_BUTTON: RegistryObject<Block> = registerBlock("brown_shroom_button") {
+    val BROWN_SHROOM_BUTTON: RegistryObject<ButtonBlock> = registerBlock("brown_shroom_button") {
         CustomButtonBlock(
             BlockBehaviour.Properties.copy(BROWN_MUSHROOM_BLOCK))
     }
 
-    val SHROOM_STEM_BUTTON: RegistryObject<Block> = registerBlock("shroom_stem_button") {
+    val SHROOM_STEM_BUTTON: RegistryObject<ButtonBlock> = registerBlock("shroom_stem_button") {
         CustomButtonBlock(
             BlockBehaviour.Properties.copy(MUSHROOM_STEM))
     }
 
-    val RED_SHROOM_FENCE: RegistryObject<Block> = registerBlock("red_shroom_fence") {
+    val RED_SHROOM_FENCE: RegistryObject<FenceBlock> = registerBlock("red_shroom_fence") {
         FenceBlock(BlockBehaviour.Properties.copy(RED_MUSHROOM_BLOCK)
             .sound(SoundType.FUNGUS))
     }
 
-    val BROWN_SHROOM_FENCE: RegistryObject<Block> = registerBlock("brown_shroom_fence") {
+    val BROWN_SHROOM_FENCE: RegistryObject<FenceBlock> = registerBlock("brown_shroom_fence") {
         FenceBlock(BlockBehaviour.Properties.copy(BROWN_MUSHROOM_BLOCK)
             .sound(SoundType.FUNGUS))
     }
 
-    val SHROOM_STEM_FENCE: RegistryObject<Block> = registerBlock("shroom_stem_fence") {
+    val SHROOM_STEM_FENCE: RegistryObject<FenceBlock> = registerBlock("shroom_stem_fence") {
         FenceBlock(BlockBehaviour.Properties.copy(MUSHROOM_STEM)
             .sound(SoundType.FUNGUS))
     }
 
-    val RED_SHROOM_FENCE_GATE: RegistryObject<Block> = registerBlock("red_shroom_fence_gate") {
+    val RED_SHROOM_FENCE_GATE: RegistryObject<FenceGateBlock> = registerBlock("red_shroom_fence_gate") {
         FenceGateBlock(BlockBehaviour.Properties.copy(RED_MUSHROOM_BLOCK)
             .sound(SoundType.FUNGUS))
     }
 
-    val BROWN_SHROOM_FENCE_GATE: RegistryObject<Block> = registerBlock("brown_shroom_fence_gate") {
+    val BROWN_SHROOM_FENCE_GATE: RegistryObject<FenceGateBlock> = registerBlock("brown_shroom_fence_gate") {
         FenceGateBlock(BlockBehaviour.Properties.copy(BROWN_MUSHROOM_BLOCK)
             .sound(SoundType.FUNGUS))
     }
 
-    val SHROOM_STEM_FENCE_GATE: RegistryObject<Block> = registerBlock("shroom_stem_fence_gate") {
+    val SHROOM_STEM_FENCE_GATE: RegistryObject<FenceGateBlock> = registerBlock("shroom_stem_fence_gate") {
         FenceGateBlock(BlockBehaviour.Properties.copy(MUSHROOM_STEM)
             .sound(SoundType.FUNGUS))
     }
 
-    val RED_SHROOM_WALL: RegistryObject<Block> = registerBlock("red_shroom_wall") {
+    val RED_SHROOM_WALL: RegistryObject<WallBlock> = registerBlock("red_shroom_wall") {
         WallBlock(BlockBehaviour.Properties.copy(RED_MUSHROOM_BLOCK).sound(SoundType.FUNGUS))
     }
 
-    val BROWN_SHROOM_WALL: RegistryObject<Block> = registerBlock("brown_shroom_wall") {
+    val BROWN_SHROOM_WALL: RegistryObject<WallBlock> = registerBlock("brown_shroom_wall") {
         WallBlock(BlockBehaviour.Properties.copy(BROWN_MUSHROOM_BLOCK).sound(SoundType.FUNGUS))
     }
 
-    val SHROOM_STEM_WALL: RegistryObject<Block> = registerBlock("shroom_stem_wall") {
+    val SHROOM_STEM_WALL: RegistryObject<WallBlock> = registerBlock("shroom_stem_wall") {
         WallBlock(BlockBehaviour.Properties.copy(MUSHROOM_STEM).sound(SoundType.FUNGUS))
     }
 
