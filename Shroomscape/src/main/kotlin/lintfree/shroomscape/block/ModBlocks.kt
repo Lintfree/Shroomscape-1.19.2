@@ -2,6 +2,7 @@ package lintfree.shroomscape.block
 
 import lintfree.shroomscape.Shroomscape
 import lintfree.shroomscape.item.ModItems
+import lintfree.shroomscape.tabs.ModItemGroups
 import net.minecraft.sounds.SoundEvent
 import net.minecraft.sounds.SoundEvents
 import net.minecraft.world.item.BlockItem
@@ -181,6 +182,6 @@ object ModBlocks {
     }
 
     private fun <T: Block?>registerBlockItem(blockName: String, block: RegistryObject<T>) {
-        ModItems.ITEM_REGISTRY.register(blockName) { -> BlockItem(block.get(), Item.Properties()) }
+        ModItems.ITEM_REGISTRY.register(blockName) { -> BlockItem(block.get(), Item.Properties().tab(ModItemGroups.ShroomItemGroup)) }
     }
 }
