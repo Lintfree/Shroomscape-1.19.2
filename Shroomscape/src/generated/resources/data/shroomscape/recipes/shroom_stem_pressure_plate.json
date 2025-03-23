@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "minecraft:mushroom_stem"
+    }
+  },
+  "pattern": [
+    "##"
+  ],
+  "result": {
+    "item": "shroomscape:shroom_stem_pressure_plate"
+  }
+}
