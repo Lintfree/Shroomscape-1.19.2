@@ -4,10 +4,13 @@
   "key": {
     "#": {
       "item": "minecraft:mushroom_stem"
+    },
+    "s": {
+      "item": "minecraft:stick"
     }
   },
   "pattern": [
-    "###",
+    "#s#",
     "###"
   ],
   "result": {
